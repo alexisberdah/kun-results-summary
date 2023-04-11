@@ -1,0 +1,324 @@
+@import 'scss/reset';
+
+$radius: 2rem;
+$medium: 500;
+$bold: 500;
+$extraBold: 700;
+$circleDim : 12.5rem;
+
+$gradient1: linear-gradient(to bottom, hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+$gradient2: linear-gradient(to bottom, hsla(256, 72%, 46%, 1), hsla(241, 72%, 46%, 0));
+
+$yellow: #FFB21E;
+$yellowWhite: mix(#FFB21E, #FFF, 5%);
+$blue: #1125D6;
+$blueWhite: mix(#1125D6, #FFF, 5%);
+$green: #00BB8F;
+$greenWhite: mix(#00BB8F, #FFF, 5%);
+$red: #FF5555;
+$redWhite: mix(#FF5555, #FFF, 5%);
+$darkNavy: #303B59;
+$lightBlue: #CAC9FF;
+$veryLightBlue: #ECF2FF;
+
+.headingXL {
+  font-weight: $extraBold;
+  font-size: 4.5rem;
+}
+
+.headingL {
+  font-weight: $bold;
+  font-size: 2rem;
+}
+
+.headingM {
+  font-weight: $bold;
+  font-size: 1.5rem;
+}
+
+.bodyB {
+  font-weight: $bold;
+  font-size: 1.125rem;
+}
+
+.body {
+  font-weight: $medium;
+  font-size: 1.125rem;
+}
+
+body {
+  font-family: 'Hanken Grotesk', sans-serif;
+  font-weight: $bold;
+}
+
+a {
+  text-decoration: none;
+  color: hsl(252, 100%, 67%);
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap');
+
+.mainContainer {
+  min-height: 95vh;
+  background-color: $veryLightBlue;
+  display: flex;
+}
+
+.card {
+  background-color: white;
+  width: 46rem;
+  height: 32rem;
+  margin: auto;
+  border-radius: $radius;
+  display: flex;
+}
+
+.left {
+  width: 50%;
+  border-radius: $radius;
+  background: $gradient1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.left h2 {
+  color: white;
+  margin-top: 1.75rem;
+}
+
+.left h3 {
+  color: $lightBlue;
+  font-weight: $medium;
+  font-size: 1.5rem;
+  margin-top: 2.375rem;
+}
+
+.left>p {
+  max-width: 16.25rem;
+  text-align: center;
+  color: $lightBlue;
+  margin-top: .875rem;
+  line-height: 1.3;
+}
+
+.circle {
+  width: $circleDim;
+  height: $circleDim;
+  border-radius: 50%;
+  background: $gradient2;
+  margin-top: 2.1875rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.circle h1 {
+  color: white;
+}
+
+.circle p {
+  color: $lightBlue;
+  opacity: 0.5168;
+}
+
+.right {
+  background-color: white;
+  flex: 1;
+  border-radius: $radius;
+  padding: 0 2.5rem;
+}
+
+.right h1 {
+  color: $darkNavy;
+  margin-top: 2.375rem;
+}
+
+.skillsContainer {
+  height: 17rem;
+  margin-top: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.skill {
+  height: 3.5rem;
+  border-radius: .75rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.skill.red {
+  background-color: $redWhite;
+
+  p {
+    color: $red;
+  }
+}
+
+.skill.yellow {
+  background-color: $yellowWhite;
+
+  p {
+    color: $yellow;
+  }
+}
+
+.skill.green {
+  background-color: $greenWhite;
+
+  p {
+    color: $green;
+  }
+}
+
+.skill.blue {
+  background-color: $blueWhite;
+
+  p {
+    color: $blue;
+  }
+}
+
+.skill .name {
+  display: flex;
+  align-items: center;
+  margin-left: 1.2606rem;
+}
+
+.skill .name img {
+  margin-right: 1.0106rem;
+}
+
+.skill .score {
+  margin-right: 1rem;
+}
+
+.score {
+  color: $darkNavy;
+}
+
+.score .greyed {
+  opacity: 0.5;
+}
+
+.continueButton {
+  background: $darkNavy;
+  height: 3.5rem;
+  margin-top: 2.5625rem;
+  border-radius: 8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.continueButton:hover {
+  background: $gradient1;
+  cursor: pointer;
+}
+
+.continueButton p {
+  color: white;
+}
+
+.attribution {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 5vh;
+  font-size: .875rem;
+}
+
+@media screen and (max-width: 767px) {
+  .mainContainer {
+    background: white;
+  }
+
+  .card {
+    flex-direction: column;
+    height: 100%;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    margin: 0;
+  }
+
+  .left {
+    width: 100%;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+
+    h2 {
+      font-size: 1.5rem;
+      margin-top: 1.5rem;
+    }
+
+    h3 {
+      font-size: 1.125rem;
+      font-weight: $bold;
+      margin-top: 1.5rem;
+    }
+    >p {
+      font-weight: $medium;
+      font-size: 1rem;
+      margin-top: .5rem;
+      margin-bottom: 2.5rem;
+    }
+  }
+
+  .circle {
+    width: 8.75rem;
+    height: 8.75rem;
+    margin-top: 1.5rem;
+
+    h1 {
+      font-weight: $extraBold;
+      font-size: 3.5rem;
+    }
+
+    p {
+      font-size: 1rem;
+    }
+  }
+
+  .right {
+    padding: 0;
+
+    h1 {
+      font-size: 1.125rem;
+      margin-left: 2rem;
+    }
+
+    .skillsContainer {
+      margin: 1.5rem 1.875rem 0 1.875rem;
+    }
+
+    .skill {
+      height: 3.5rem;
+    }
+
+    .name img {
+      margin-right: .75rem;
+    }
+
+    .name p {
+      font-size: 1rem;
+    }
+
+    .score {
+      font-size: 1rem;
+    }
+
+    .continueButton {
+      margin: 1.5rem auto auto auto;
+      width: 19.6875rem;
+    }
+  }
+
+  .attribution {
+    text-align: center;
+    font-size: .75rem;
+  }
+}
