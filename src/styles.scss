@@ -64,6 +64,19 @@ a {
   display: flex;
 }
 
+.attribution {
+  text-align: center;
+  font-size: 11px;
+  height: 5vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
 .card {
   background-color: white;
   width: 46rem;
@@ -224,14 +237,6 @@ a {
   color: white;
 }
 
-.attribution {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 5vh;
-  font-size: .875rem;
-}
-
 @media screen and (max-width: 767px) {
   .mainContainer {
     background: white;
@@ -260,6 +265,7 @@ a {
       font-weight: $bold;
       margin-top: 1.5rem;
     }
+
     >p {
       font-weight: $medium;
       font-size: 1rem;
@@ -315,10 +321,5 @@ a {
       margin: 1.5rem auto auto auto;
       width: 19.6875rem;
     }
-  }
-
-  .attribution {
-    text-align: center;
-    font-size: .75rem;
   }
 }
